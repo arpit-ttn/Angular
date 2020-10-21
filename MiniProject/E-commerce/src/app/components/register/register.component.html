@@ -1,0 +1,57 @@
+<div class="container">
+<div class="jumbotron">
+    <h1 class="text-center">Register User</h1>
+</div>
+
+<form [formGroup]="createUser" (ngSubmit)="regUser()">
+    <div class="form-group">
+        <label>Name</label>
+        <input [class.is-invalid]="Name.invalid &&
+                                   Name.touched" formControlName="Name" type="text" class="form-control">
+        <div *ngIf= "Name.invalid && Name.touched">
+         <small *ngIf="Name.errors?.required" class="text-danger"> Name is required</small> 
+         <small *ngIf="Name.errors?.minlength" class="text-danger"> Name must be atleast 3 characters</small>
+       </div>                             
+      </div>
+  
+      <div class="form-group">
+        <label>Email</label>
+        <input [class.is-invalid]="Email.invalid &&
+                                   Email.touched" formControlName="Email" type="email" class="form-control">
+        <div *ngIf= "Email.invalid && Email.touched">
+         <small *ngIf="Email.errors?.required" class="text-danger"> Email is required</small> 
+         <small *ngIf="Email.errors?.email" class="text-danger"> Email is Invalid </small>
+       </div>                             
+      </div>
+       
+      <div class="form-group">
+        <label>Password</label>
+        <input formControlName="password" type="password" class="form-control">
+      </div>
+  
+      <div class="form-group">
+        <label>Confirm Password</label>
+        <input [class.is-invalid]="createUser.errors?.misMatch" formControlName="confirmPassword" type="password" class="form-control">
+        <small class="text-danger" *ngIf="createUser.errors?.misMatch" > Passwords don not match</small>
+      </div>
+  
+      <div formGroupName="address">
+        <div class="form-group">
+          <label>City</label>
+          <input formControlName="city" type="text" class="form-control">
+        </div>
+  
+        <div class="form-group">
+          <label>State</label>
+          <input formControlName="state" type="text" class="form-control">
+        </div>
+  
+        <div class="form-group">
+          <label>Postal Code</label>
+          <input formControlName="postalCode"type="text" class="form-control">
+        </div>
+      </div>
+    <button class="btn btn-primary" type="submit">Register</button>
+
+</form>
+</div>

@@ -1,0 +1,16 @@
+<div class="container">
+    <br>
+    <h2>Mobiles</h2>
+    <br>
+    <div *ngFor="let product of products; index as productId">
+
+        <h3>
+          <a [routerLink]="['/products/mobile-list', productId]">
+            <img src="https://images.unsplash.com/photo-1567581935884-3349723552ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" width="70">
+            {{ product.name }}
+          </a>
+        </h3>
+      
+      </div><br>
+      <button class="button" type="submit" (click) = "goback()" >Go Back</button>
+</div>

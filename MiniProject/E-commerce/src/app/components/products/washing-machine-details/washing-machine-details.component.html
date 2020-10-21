@@ -1,0 +1,14 @@
+<div class="container">
+    <br>
+    <h2>WashingMachine Details</h2>
+<br>
+  <div *ngIf="washingMachine">
+    <h3>{{ washingMachine.name }}</h3>
+    <h4>{{ washingMachine.price | currency }}</h4>
+    <p>{{ washingMachine.description }}</p>
+    <button class="btn btn-dark"  (click)="addToCart3(washingMachine)">Add to Cart</button>
+
+  </div> <br>
+  <button class="btn btn-dark"  type="submit" (click) = "back()" >Go Back</button>
+  
+</div>

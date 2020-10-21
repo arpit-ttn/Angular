@@ -1,0 +1,16 @@
+<div class="container">
+    <br>
+    <h2>Televisions</h2>
+    <br>
+    <div *ngFor="let television of televisions; index as televisionId">
+
+        <h3>
+          <a [routerLink]="['/products/television-list', televisionId]">
+            <img src="https://www.sony.co.in/image/068585b8e6c13f90656781f937efa24e?fmt=pjpeg&wid=165&bgcolor=FFFFFF&bgc=FFFFFF" width="70">
+            {{ television.name }}
+          </a>
+        </h3>
+      
+      </div><br>
+      <button class="button" type="submit" (click) = "goback()" >Go Back</button>
+</div>

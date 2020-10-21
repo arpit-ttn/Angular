@@ -1,0 +1,15 @@
+<div class="container">
+    <br>
+    <h2>Mobile Details</h2>
+<br>
+  <div *ngIf="product">
+    <h3>{{ product.name }}</h3>
+    <h4>{{ product.price | currency }}</h4>
+    <p>{{ product.description }}</p>
+    <button class="btn btn-dark"  (click)="addToCart(product)">Add to Cart</button>
+
+  </div> <br>
+  <button class="btn btn-dark"  type="submit" (click) = "back()" >Go Back</button>
+  
+</div>
+

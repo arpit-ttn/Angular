@@ -1,0 +1,15 @@
+<div class="container">
+    <br>
+    <h2>LED Details</h2>
+<br>
+  <div *ngIf="television">
+    <h3>{{ television.name }}</h3>
+    <h4>{{ television.price | currency }}</h4>
+    <p>{{ television.description }}</p>
+    <button class="btn btn-dark"  (click)="addToCart2(television)">Add to cart</button>
+
+  </div> <br>
+  <button class="btn btn-dark"  type="submit" (click) = "back()" >Go Back</button>
+  
+</div>
+

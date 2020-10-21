@@ -1,0 +1,16 @@
+<div class="container">
+    <br>
+    <h2>WashingMachines</h2>
+    <br>
+    <div *ngFor="let washingMachine of washingMachines; index as washingMachineId">
+
+        <h3>
+          <a [routerLink]="['/products/washingMachine-list', washingMachineId]">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/LGwashingmachine.jpg/220px-LGwashingmachine.jpg" width="70">
+            {{ washingMachine.name }}
+          </a>
+        </h3>
+      
+      </div><br>
+      <button class="button" type="submit" (click) = "goback()" >Go Back</button>
+</div>

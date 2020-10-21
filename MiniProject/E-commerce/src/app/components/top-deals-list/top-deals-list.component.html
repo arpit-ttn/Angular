@@ -1,0 +1,14 @@
+<div class="container">
+    <br>
+    <h2>TOP DEALS</h2>
+    <br>
+    <div *ngFor="let topDeal of topDeals; index as topDealId">
+
+        <h3>
+          <a [routerLink]="['/products', topDealId]">
+            {{ topDeal.name }}
+          </a>
+        </h3>
+    </div>
+</div>
+
